@@ -11,6 +11,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
 }
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+}
 #home{
     height: 85vh;
 	background-image: url(bg.jpg);
@@ -255,7 +260,7 @@ span {
     line-height: 24px;
     margin-top: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 500px) {
     #contact {
         padding-top: 1000px;
     }
