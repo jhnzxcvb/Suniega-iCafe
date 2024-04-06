@@ -1,0 +1,340 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+#home{
+    height: 85vh;
+	background-image: url(bg.jpg);
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 100px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.6s;
+    z-index: 1000;
+    background-color: black;
+}
+.navbar-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 30, 0);
+}
+.navbar-toggler {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+@media (min-width: 768px) {
+    .navbar-toggler {
+        position: absolute;
+    }
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    margin-right: 10px;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: green;
+}
+.nav-link {
+    font-size: 18px;
+}
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-fluid {
+    padding-top: 375px;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+p{
+    color: white;
+    font-size: 25px;
+}
+span {
+    color: green;
+}
+.btn-green {
+    background-color: green;
+    border-color: green;
+}
+.btn-green:hover{
+    background-color: black;
+}
+.btn-ellipse {
+    border-radius: 50px;
+}
+.home-footer {
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+.home-footer .contact-info {
+    display: flex;
+    justify-content: space-between;
+}
+.home-footer .contact-info div {
+    display: flex;
+    align-items: center;
+}
+.home-footer .contact-info div i {
+    margin-right: 10px;
+    font-size: 25px;
+	display: block;
+	text-align: center;
+	color: white;
+}
+.home-footer .contact-info div p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    .home-footer .contact-info div i {
+        font-size: 20px;
+    }
+    .home-footer .contact-info div p {
+        font-size: 12px;
+    }
+}
+#about {
+    padding: 200px 0px;
+    background-color: black;
+}
+
+@media (max-width: 767px) {
+    #about {
+        padding: 50px 0px;
+    }
+}
+.about-container {
+    background-color: black;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#about p {
+    font-size: 18px;
+}
+#service {
+    height: 100vh;
+	width: 100%;
+	padding: 180px 0px;
+	background-color: black;
+}
+.service-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100px;
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: 20px;
+}
+
+.service-container img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.service-container:hover {
+    height: 300px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-container:hover img {
+    opacity: 1;
+}
+
+.service-container h3,
+.service-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0;
+    transition: opacity 0.6s ease;
+    opacity: 1;
+    color: black;
+}
+.service-container:hover h3,
+.service-container:hover p {
+    opacity: 1;
+}
+@media (max-width: 767px) {
+    #service {
+        text-align: center;
+    }
+}
+#contact {
+    padding: 100px 0;
+    background-color: black;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.cont {
+    text-align: center;
+}
+.contact-container {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 200px;
+}
+.card {
+    height: 250px;
+    padding: 20px 35px;
+    background: rgb(0, 30, 0);
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.card i {
+    font-size: 50px;
+    color: white;
+}
+.card a {
+    width: 45px;
+    height: 45px;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.card h5 {
+    color: white;
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+.card p {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    #contact {
+        padding-top: 800px;
+    }
+}
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height:width) */
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 768px) {
+    .map-container {
+        padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+    }
+}
+.modal-header {
+    border-bottom: none;
+    background-color: black;
+}
+.modal-title {
+    color:rgb(255, 255, 255);
+}
+.log {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 0 green,  1px 1px 0 green, 1px 1px 0 green, 1px 1px 0 green;
+}
+.reg {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 0 green,  1px 1px 0 green, 1px 1px 0 green, 1px 1px 0 green;
+}
+.modal-footer {
+    border-top: none;
+}
+.acc {
+    font-size: 20px;
+    text-align: center;
+}
+.modal-content {
+    background-color: black;
+    box-shadow: 0 0 100px 50px rgba(0, 129, 6, 0.2);
+}
+.modal-body form {
+    background-color: rgb(0, 51, 0);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.switch-form-link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap; 
+    margin: 0 auto;
+    animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
+    filter: drop-shadow(10px 5px 10px green);
+    text-shadow: 0px 0px 0 #ffffff,  0px 0px 0 #ffffff, 0px 0px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
